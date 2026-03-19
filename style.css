@@ -31,6 +31,16 @@ button {
   border-radius: 5px;
   cursor: pointer;
 }
+#weatherResult {
+  margin-top: 20px;
+  background: rgba(0,0,0,0.3);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+#weatherResult p {
+  margin: 5px 0;
+}
 
 #weatherResult {
   margin-top: 20px;
