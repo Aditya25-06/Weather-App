@@ -19,10 +19,17 @@ function getWeather() {
       }
 
       document.getElementById("weatherResult").innerHTML = `
-        <h2>${data.name}</h2>
-        <p>🌡️ Temp: ${data.main.temp}°C</p>
-        <p>☁️ Weather: ${data.weather[0].main}</p>
-      `;
+  <h2>${data.name}</h2>
+  <p>🌡️ Temp: ${data.main.temp}°C</p>
+  <p>🤒 Feels like: ${data.main.feels_like}°C</p>
+  <p>☁️ Weather: ${data.weather[0].main}</p>
+  <p>💧 Humidity: ${data.main.humidity}%</p>
+  <p>🌬️ Wind: ${data.wind.speed} m/s</p>
+  <p>📊 Pressure: ${data.main.pressure} hPa</p>
+  <p>🌅 Sunrise: ${new Date(data.sys.sunrise * 1000).toLocaleTimeString()}</p>
+  <p>🌇 Sunset: ${new Date(data.sys.sunset * 1000).toLocaleTimeString()}</p>
+`;
+      
     })
     .catch(error => {
       console.log(error);
